@@ -627,11 +627,13 @@ public class Main extends AppCompatActivity {
             showList.setVisibility(View.GONE);
             dialogforSelect.dismiss();
         }
-    };private View.OnClickListener show_Image = new View.OnClickListener() {
+    };
+    private View.OnClickListener show_Image = new View.OnClickListener() {
         public void onClick(View v) {
             dialogforSelect.dismiss();
         }
-    };private View.OnClickListener show_Text = new View.OnClickListener() {
+    };
+    private View.OnClickListener show_Text = new View.OnClickListener() {
         public void onClick(View v) {
             showList.setVisibility(View.VISIBLE);
             showGrid.setVisibility(View.GONE);
