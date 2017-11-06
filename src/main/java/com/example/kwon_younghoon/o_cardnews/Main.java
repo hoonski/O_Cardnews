@@ -42,6 +42,7 @@ public class Main extends AppCompatActivity {
     private Adapter adapter;
     private AdapterL adapterL;
     private Button closebutton;
+    private Button closebutton1;
     private DialogforSelect dialogforSelect;
     private DialogLiscense dialogLiscense;
     private WebView webView;
@@ -53,6 +54,7 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         closebutton = (Button) findViewById(R.id.gridclose);
+        closebutton1 = (Button)findViewById(R.id.gridclose1);
         showGrid = (LinearLayout) findViewById(R.id.showgrid);
         showList = (LinearLayout) findViewById(R.id.showlist);
 
@@ -137,10 +139,10 @@ public class Main extends AppCompatActivity {
                         string = "http://star.mk.co.kr/new/view.php?mc=ST&year=2017&no=725459";
                         break;
                     case 2:
-                        string = "http://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=001&aid=0009655541";
+                        string = "http://www.yonhapnews.co.kr/bulletin/2017/11/02/0200000000AKR20171102046100005.HTML?input=1195m";
                         break;
                     case 3:
-                        string = "http://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=003&aid=0008263427";
+                        string = "http://stylem.mt.co.kr/stylemView.php?no=2017110214133869446";
                         break;
                     case 4:
                         string = "http://entertain.naver.com/ranking/read?oid=311&aid=0000790849";
@@ -164,10 +166,10 @@ public class Main extends AppCompatActivity {
                         string = "http://star.mk.co.kr/new/view.php?mc=ST&year=2017&no=725459";
                         break;
                     case 2:
-                        string = "http://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=001&aid=0009655541";
+                        string = "http://www.yonhapnews.co.kr/bulletin/2017/11/02/0200000000AKR20171102046100005.HTML?input=1195m";
                         break;
                     case 3:
-                        string = "http://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=003&aid=0008263427";
+                        string = "http://stylem.mt.co.kr/stylemView.php?no=2017110214133869446";
                         break;
                     case 4:
                         string = "http://entertain.naver.com/ranking/read?oid=311&aid=0000790849";
@@ -369,6 +371,7 @@ public class Main extends AppCompatActivity {
                 listView4.setVisibility(View.GONE);
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.VISIBLE);
+                closebutton1.setVisibility(View.VISIBLE);
             }
         });
         Button button2 = (Button) findViewById(R.id.btn2);
@@ -386,6 +389,7 @@ public class Main extends AppCompatActivity {
                 listView4.setVisibility(View.GONE);
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.VISIBLE);
+                closebutton1.setVisibility(View.VISIBLE);
             }
         });
         Button button3 = (Button) findViewById(R.id.btn3);
@@ -403,6 +407,7 @@ public class Main extends AppCompatActivity {
                 listView4.setVisibility(View.GONE);
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.VISIBLE);
+                closebutton1.setVisibility(View.VISIBLE);
             }
         });
         Button button4 = (Button) findViewById(R.id.btn4);
@@ -420,6 +425,7 @@ public class Main extends AppCompatActivity {
                 listView4.setVisibility(View.VISIBLE);
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.VISIBLE);
+                closebutton1.setVisibility(View.VISIBLE);
             }
         });
         Button button5 = (Button) findViewById(R.id.btn5);
@@ -437,6 +443,7 @@ public class Main extends AppCompatActivity {
                 listView4.setVisibility(View.GONE);
                 listView5.setVisibility(View.VISIBLE);
                 closebutton.setVisibility(View.VISIBLE);
+                closebutton1.setVisibility(View.VISIBLE);
             }
         });
         closebutton.setBackgroundResource(R.drawable.ic_action_remove);
@@ -454,6 +461,25 @@ public class Main extends AppCompatActivity {
                 listView4.setVisibility(View.GONE);
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.GONE);
+                closebutton1.setVisibility(View.GONE);
+            }
+        });
+        closebutton1.setBackgroundResource(R.drawable.ic_action_remove);
+        closebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gridView1.setVisibility(View.GONE);
+                gridView2.setVisibility(View.GONE);
+                gridView3.setVisibility(View.GONE);
+                gridView4.setVisibility(View.GONE);
+                gridView5.setVisibility(View.GONE);
+                listView1.setVisibility(View.GONE);
+                listView2.setVisibility(View.GONE);
+                listView3.setVisibility(View.GONE);
+                listView4.setVisibility(View.GONE);
+                listView5.setVisibility(View.GONE);
+                closebutton.setVisibility(View.GONE);
+                closebutton1.setVisibility(View.GONE);
             }
         });
 
@@ -541,11 +567,14 @@ public class Main extends AppCompatActivity {
     void initL_2() {
         listView2 = (ListView) findViewById(R.id.cardL2);
         cardlDatas2.add(new CardlData("송중기S2송혜교 결혼식, 중국 ‘몰래 생중계‘", "송중기, 송혜교 부부의 결혼식이 중국 온라인 플랫폼을 통해 몰래 생중계된 가운데, 이 플랫폼이 결혼식에도 참석했던 중국 배우 장쯔이 남편의 소유라는 보도가 나왔다. "));
-        cardlDatas2.add(new CardlData("\\\"구탱이형, 편안히 잠드세요\\\" 故 김주혁 영결식", "(창원=연합뉴스) 김선경 기자 = 2일 오후 1시 20분께 경남 창원시 창원-김해 창원방향 창원터널 앞에서 드럼통에 유류를 싣고 달리던 5t 화물차가 콘크리트 중앙분리대를 들이받았다."));
-        cardlDatas2.add(new CardlData("박서준, 스포티한 매력의 공항 패션…\\\"훈훈한 남친룩\\\"", ""));
-        cardlDatas2.add(new CardlData("", ""));
-        cardlDatas2.add(new CardlData("", ""));
-        cardlDatas2.add(new CardlData("", ""));
+        cardlDatas2.add(new CardlData("\\\"구탱이형, 편안히 잠드세요\\\" 故 김주혁 영결식", "(서울=연합뉴스) 윤고은 조재영 기자 = 지난달 30일 불의의 사고로 숨진 배우 김주혁의 영결식이 2일 오전 10시 송파구 서울아산병원에서 진행된다."));
+        cardlDatas2.add(new CardlData("박서준, 스포티한 매력의 공항 패션…\\\"훈훈한 남친룩\\\"", "배우 박서준이 공항패션으로 올 블랙 룩을 선택했다.\n" +
+                "박서준은 2일 오후 해외 팬미팅 참석 차 인천국제공항을 통해 싱가폴로 출국했다.\n" +
+                "박서준은 블랙 집업 점퍼와 팬츠 차림에 검은색 다운 패딩을 착용해 멋과 보온성을 살린 패션을 연출했다."));
+        cardlDatas2.add(new CardlData("이승기 \"군생활 녹록치 않았다, 올해 TV로 복귀하고파\" ", "[엑스포츠뉴스 전원 기자] 가수 겸 배우 이승기가 전역인사를 전했다.\n" +
+                "이승기는 2일 자신의 공식 팬카페에 \"여러분 곁으로 다시 돌아온 이승기입니다\"라는 제목의 글을 게재했다.\n"));
+        cardlDatas2.add(new CardlData("'문희옥 고소' 여가수 U\"매니저 성추행 사실 입막음 협박\"", "[더팩트｜강일홍 기자] \"무섭고 두려워서 (소속사 사장님한테 성추행 당한 사실을) 아무한테도 말 못하고 있다가 문희옥 선생님과 주현미 이모한테 모든 사실들은 있는 그대로 털어놨다. 며칠 뒤 엄마한테 '우리 사장이 차안에서 내게 모텔 가자, 내 여자가 돼달라'고 했다는 말을 꺼냈다. 처음엔 몸을 만지고 '못된 짓을 했다'는 말은 감췄다.\""));
+        cardlDatas2.add(new CardlData("한은 \"가상통화, 공식 지급수단 아니고 거래위험도 크다\"", "미국 배우 케빈 스페이시가 출연하는 드라마 ‘하우스 오브 카드’의 제작이 중단됐다. 케빈 스페이시는 최근 ‘31년 전 성추행’ 논란이 일자 “동성애자로 살겠다”는 뜻을 밝힌 바 있다.\n"));
         adapterL = new AdapterL(cardlDatas2, this);
         listView2.setAdapter(adapterL);
     }
