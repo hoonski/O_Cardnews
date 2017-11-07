@@ -10,6 +10,7 @@ import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -45,9 +46,10 @@ public class Main extends AppCompatActivity {
     private Button closebutton1;
     private DialogforSelect dialogforSelect;
     private DialogLiscense dialogLiscense;
+    private ImageView imageView;
     private WebView webView;
     private String string;
-    int a;
+    int a =1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,7 @@ public class Main extends AppCompatActivity {
         closebutton1 = (Button)findViewById(R.id.gridclose1);
         showGrid = (LinearLayout) findViewById(R.id.showgrid);
         showList = (LinearLayout) findViewById(R.id.showlist);
+        imageView = (ImageView)findViewById(R.id.showmain);
 
         webView = (WebView) findViewById(R.id.webV);
         WebSettings webSettings = webView.getSettings();
@@ -360,6 +363,14 @@ public class Main extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (a == 1){
+                    showList.setVisibility(View.GONE);
+                    showGrid.setVisibility(View.VISIBLE);
+                }
+                else{
+                    showGrid.setVisibility(View.GONE);
+                    showList.setVisibility(View.VISIBLE);
+                }
                 gridView1.setVisibility(View.VISIBLE);
                 gridView2.setVisibility(View.GONE);
                 gridView3.setVisibility(View.GONE);
@@ -372,12 +383,21 @@ public class Main extends AppCompatActivity {
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.VISIBLE);
                 closebutton1.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.GONE);
             }
         });
         Button button2 = (Button) findViewById(R.id.btn2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (a == 1){
+                    showList.setVisibility(View.GONE);
+                    showGrid.setVisibility(View.VISIBLE);
+                }
+                else{
+                    showGrid.setVisibility(View.GONE);
+                    showList.setVisibility(View.VISIBLE);
+                }
                 gridView1.setVisibility(View.GONE);
                 gridView2.setVisibility(View.VISIBLE);
                 gridView3.setVisibility(View.GONE);
@@ -390,12 +410,21 @@ public class Main extends AppCompatActivity {
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.VISIBLE);
                 closebutton1.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.GONE);
             }
         });
         Button button3 = (Button) findViewById(R.id.btn3);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (a == 1){
+                    showList.setVisibility(View.GONE);
+                    showGrid.setVisibility(View.VISIBLE);
+                }
+                else{
+                    showGrid.setVisibility(View.GONE);
+                    showList.setVisibility(View.VISIBLE);
+                }
                 gridView1.setVisibility(View.GONE);
                 gridView2.setVisibility(View.GONE);
                 gridView3.setVisibility(View.VISIBLE);
@@ -408,12 +437,21 @@ public class Main extends AppCompatActivity {
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.VISIBLE);
                 closebutton1.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.GONE);
             }
         });
         Button button4 = (Button) findViewById(R.id.btn4);
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (a == 1){
+                    showList.setVisibility(View.GONE);
+                    showGrid.setVisibility(View.VISIBLE);
+                }
+                else{
+                    showGrid.setVisibility(View.GONE);
+                    showList.setVisibility(View.VISIBLE);
+                }
                 gridView1.setVisibility(View.GONE);
                 gridView2.setVisibility(View.GONE);
                 gridView3.setVisibility(View.GONE);
@@ -426,12 +464,21 @@ public class Main extends AppCompatActivity {
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.VISIBLE);
                 closebutton1.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.GONE);
             }
         });
         Button button5 = (Button) findViewById(R.id.btn5);
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (a == 1){
+                    showList.setVisibility(View.GONE);
+                    showGrid.setVisibility(View.VISIBLE);
+                }
+                else{
+                    showGrid.setVisibility(View.GONE);
+                    showList.setVisibility(View.VISIBLE);
+                }
                 gridView1.setVisibility(View.GONE);
                 gridView2.setVisibility(View.GONE);
                 gridView3.setVisibility(View.GONE);
@@ -444,12 +491,15 @@ public class Main extends AppCompatActivity {
                 listView5.setVisibility(View.VISIBLE);
                 closebutton.setVisibility(View.VISIBLE);
                 closebutton1.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.GONE);
             }
         });
         closebutton.setBackgroundResource(R.drawable.ic_action_remove);
         closebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                showGrid.setVisibility(View.GONE);
+                showList.setVisibility(View.GONE);
                 gridView1.setVisibility(View.GONE);
                 gridView2.setVisibility(View.GONE);
                 gridView3.setVisibility(View.GONE);
@@ -462,12 +512,15 @@ public class Main extends AppCompatActivity {
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.GONE);
                 closebutton1.setVisibility(View.GONE);
+                imageView.setVisibility(View.VISIBLE);
             }
         });
         closebutton1.setBackgroundResource(R.drawable.ic_action_remove);
-        closebutton.setOnClickListener(new View.OnClickListener() {
+        closebutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                showGrid.setVisibility(View.GONE);
+                showList.setVisibility(View.GONE);
                 gridView1.setVisibility(View.GONE);
                 gridView2.setVisibility(View.GONE);
                 gridView3.setVisibility(View.GONE);
@@ -480,6 +533,7 @@ public class Main extends AppCompatActivity {
                 listView5.setVisibility(View.GONE);
                 closebutton.setVisibility(View.GONE);
                 closebutton1.setVisibility(View.GONE);
+                imageView.setVisibility(View.VISIBLE);
             }
         });
 
@@ -670,6 +724,7 @@ public class Main extends AppCompatActivity {
             showGrid.setVisibility(View.VISIBLE);
             showList.setVisibility(View.GONE);
             dialogforSelect.dismiss();
+            a = 1;
         }
     };
     private View.OnClickListener show_Image = new View.OnClickListener() {
@@ -684,6 +739,7 @@ public class Main extends AppCompatActivity {
             showList.setVisibility(View.VISIBLE);
             showGrid.setVisibility(View.GONE);
             dialogforSelect.dismiss();
+            a = 2;
         }
     };
     private View.OnClickListener diaclose = new View.OnClickListener() {
